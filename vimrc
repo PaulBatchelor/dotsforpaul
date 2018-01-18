@@ -10,3 +10,5 @@ set noswapfile
 
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+syntax on
