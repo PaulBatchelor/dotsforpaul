@@ -42,10 +42,11 @@
  ;; If there is more than one, they won't work right.
  )
 
- (setq-default indent-tabs-mode nil)
- (setq-default tab-width 4)
- (setq indent-line-function 'insert-tab)
- (setq c-default-style "linux") 
- (setq c-basic-offset 4) 
- (c-set-offset 'comment-intro 0)
- (evil-mode 1)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+(setq c-default-style "linux") 
+(setq c-basic-offset 4) 
+(c-set-offset 'comment-intro 0)
+(setq evil-want-C-u-scroll t) 
+(evil-mode t)
