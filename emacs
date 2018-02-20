@@ -42,6 +42,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+
+; Automatically append files 
+(setq org-agenda-files
+      (append (file-expand-wildcards "~/proj/TODO/*.org")))
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
@@ -50,3 +55,4 @@
 (c-set-offset 'comment-intro 0)
 (setq evil-want-C-u-scroll t) 
 (evil-mode t)
+(setq linum-format "%d ")
