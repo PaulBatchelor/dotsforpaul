@@ -6,9 +6,11 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+ 
 (setq package-enable-at-startup nil)
 (package-initialize)
-
+    
 ;; Disable the splash screen (to enable it agin, replace the t with 0)
 (setq inhibit-splash-screen t)
 
@@ -56,3 +58,10 @@
 (setq evil-want-C-u-scroll t) 
 (evil-mode t)
 (setq linum-format "%d ")
+
+; remap buffer-list to buffer-menu
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
+
+; color marker
+(require 'column-marker)
+(add-hook 'fundamental-mode-hook (lambda () (interactive) (column-marker-1 80)))
