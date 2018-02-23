@@ -61,7 +61,3 @@
 
 ; remap buffer-list to buffer-menu
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
-
-; color marker
-(require 'column-marker)
-(add-hook 'fundamental-mode-hook (lambda () (interactive) (column-marker-1 80)))
