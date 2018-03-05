@@ -25,10 +25,12 @@
 ;; The above is the default in recent emacsen
 
 ;; Some keybindings from David O'Toole Tutorial
-(require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-c\C-c" 'org-toggle-checkbox)
+; override keybindings in org-agenda mode
+(define-key org-agenda-mode-map "j" 'org-agenda-next-line)
+(define-key org-agenda-mode-map "k" 'org-agenda-previous-line)
 (setq org-log-done t)
 
 (custom-set-variables
@@ -36,9 +38,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files
+        (quote
+         ("~/proj/TODO/TODO.org" "~/proj/TODO/muviklabs.org" "~/proj/TODO/palestrina.org")))
  '(package-selected-packages
-   (quote
-    (fill-column-indicator w3m w3 org-link-minor-mode evil-visual-mark-mode))))
+        (quote
+         (fill-column-indicator w3m w3 org-link-minor-mode evil-visual-mark-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -51,6 +56,7 @@
 (setq org-agenda-files
       (append (file-expand-wildcards "~/proj/TODO/*.org")))
 
+ 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
