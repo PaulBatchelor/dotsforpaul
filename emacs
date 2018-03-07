@@ -29,6 +29,7 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-c\C-c" 'org-toggle-checkbox)
 ; override keybindings in org-agenda mode
+(require 'org-agenda)
 (define-key org-agenda-mode-map "j" 'org-agenda-next-line)
 (define-key org-agenda-mode-map "k" 'org-agenda-previous-line)
 (setq org-log-done t)
