@@ -72,12 +72,14 @@
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 
 ; color marker
-(require 'fill-column-indicator)
-(setq fci-rule-column 80)
-(setq fci-rule-character 124)
-(fci-mode t)
+; (require 'fill-column-indicator)
+; (setq fci-rule-column 80)
+; (setq fci-rule-character 124)
+; (fci-mode t)
 
 ; darkroom: downloaded from https://github.com/joaotavora/darkroom
-; (require 'darkroom)
+(require 'darkroom)
 ; Use darkroom with CWEB .w files by default
-; (add-to-list 'auto-mode-alist '("\\.w\\'" . darkroom-tentative-mode))
+(add-to-list 'auto-mode-alist '("\\.w\\'" . darkroom-tentative-mode))
+
+(setq-default fill-column 80)
