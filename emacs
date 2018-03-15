@@ -77,9 +77,13 @@
 ; (setq fci-rule-character 124)
 ; (fci-mode t)
 
-; darkroom: downloaded from https://github.com/joaotavora/darkroom
-(require 'darkroom)
-; Use darkroom with CWEB .w files by default
-(add-to-list 'auto-mode-alist '("\\.w\\'" . darkroom-tentative-mode))
-
 (setq-default fill-column 80)
+; darkroom: downloaded from https://github.com/joaotavora/darkroom
+;(require 'darkroom)
+; Use darkroom with CWEB .w files by default
+;(add-to-list 'auto-mode-alist '("\\.w\\'" . darkroom-tentative-mode))
+
+
+(require 'olivetti)
+
+(setq olivetti-hide-mode-line t)
