@@ -92,3 +92,8 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
+; Whitespace mode
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
