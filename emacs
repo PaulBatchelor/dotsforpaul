@@ -7,10 +7,10 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
- 
+
 (setq package-enable-at-startup nil)
 (package-initialize)
-    
+
 ;; Disable the splash screen (to enable it agin, replace the t with 0)
 (setq inhibit-splash-screen t)
 
@@ -85,7 +85,10 @@
 
 (setq-default fill-column 80)
 ; turning of electric indent
-(add-hook 'after-change-major-mode-hook (lambda() (electric-indent-mode -1))) 
+(add-hook 'after-change-major-mode-hook (lambda() (electric-indent-mode -1)))
 
 (require 'olivetti)
 (setq olivetti-hide-mode-line t)
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
