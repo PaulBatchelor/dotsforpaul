@@ -83,3 +83,6 @@
 (add-to-list 'auto-mode-alist '("\\.w\\'" . darkroom-tentative-mode))
 
 (setq-default fill-column 80)
+
+; turning of electric indent
+(add-hook 'after-change-major-mode-hook (lambda() (electric-indent-mode -1))) 
